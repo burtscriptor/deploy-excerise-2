@@ -6,19 +6,13 @@ function App() {
   const [error, setError] = useState(null)
 
   useEffect(() => {
-    
-    
-     
-      fetch(("/api")).then(
+      fetch(("/api/users/")).then(
         response => response.json()
       ).then
       (data => { setUsers(data)
         console.log(data)
-
       }
     )
-   
-    
   }, [])
 
   return (
